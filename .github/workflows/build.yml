@@ -14,4 +14,4 @@ jobs:
         uses: microsoft/setup-msbuild@v1.1
 
       - run: |
-        msbuild -version
+          msbuild -version
