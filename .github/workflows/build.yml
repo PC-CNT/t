@@ -19,4 +19,4 @@ jobs:
         run: |
           git clone --recursive https://github.com/DBCTRADO/TVTest.git
           cd TVTest
-          msbuild src/LibISDB/Projects/LibISDB.sln /t:build /p:Configuration=Release;Platform="x64"
+          msbuild src/LibISDB/Projects/LibISDB.sln /t:build /p:Configuration=Release
