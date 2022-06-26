@@ -15,5 +15,8 @@ jobs:
         with:
           msbuild-architecture: x64
 
-      - run: |
-          msbuild -version
+      - name: git
+        run: |
+          git clone --recursive https://github.com/DBCTRADO/TVTest.git
+          cd TVTest
+          msbuild src/LibISDB/Projects/LibISDB.sln /t:build /p:Configuration=Release;Platform="x64"
