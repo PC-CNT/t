@@ -18,14 +18,13 @@ jobs:
       - name: git
         run: |
           git clone --recursive https://github.com/DBCTRADO/TVTest.git
-          cd TVTest
 
       - name: msbuild
         run: |
-          msbuild src/LibISDB/Projects/LibISDB.sln /t:build /p:Configuration=Release
+          msbuild TVTest/src/LibISDB/Projects/LibISDB.sln /t:build /p:Configuration=Release
 
       - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: LibISDB
-          path: src/LibISDB/Projects/x64
+          path: TVTest/src/LibISDB/Projects/x64
