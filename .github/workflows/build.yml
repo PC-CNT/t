@@ -17,7 +17,7 @@ jobs:
 
       - name: git
         run: |
-          git clone https://github.com/DBCTRADO/LibISDB
+          git clone --recursive https://github.com/DBCTRADO/LibISDB
 
 # git clone --recursive https://github.com/DBCTRADO/TVTest.git
 
