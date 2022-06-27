@@ -21,10 +21,13 @@ jobs:
 
       - name: msbuild
         run: |
-          msbuild TVTest/src/LibISDB/Projects/LibISDB.sln /t:build /p:Configuration=Release
-          msbuild TVTest/src/TVTest.sln /t:build /p:Configuration=Release
-      # - name: msbuild TVTest
-      #   run: |
+          msbuild TVTest/src/LibISDB/Projects/LibISDB.sln
+
+      - name: msbuild TVTest
+        run: |
+          msbuild TVTest/src/TVTest.sln
+
+        # /t:build /p:Configuration=Release
 
       - name: upload artifacts
         uses: actions/upload-artifact@v3
