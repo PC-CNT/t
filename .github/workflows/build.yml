@@ -21,7 +21,7 @@ jobs:
 
       - name: msbuild LibISDB
         run: |
-          msbuild TVTest/src/LibISDB/Projects/LibISDB.sln
+          msbuild TVTest/src/LibISDB/Projects/LibISDB.sln /t:build /p:Configuration=Release
 
       - name: tree
         run: |
