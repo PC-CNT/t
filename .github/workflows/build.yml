@@ -21,11 +21,15 @@ jobs:
 
       - name: msbuild LibISDB
         run: |
-          msbuild $GITHUB_WORKSPACE/TVTest/src/LibISDB/Projects/LibISDB.sln
+          msbuild TVTest/src/LibISDB/Projects/LibISDB.sln
 
-      - name: msbuild TVTest
+      - name: tree
         run: |
-          msbuild $GITHUB_WORKSPACE/TVTest/src/TVTest.sln
+          tree
+
+      # - name: msbuild TVTest
+      #   run: |
+      #     msbuild TVTest/src/TVTest.sln
 
         # /t:build /p:Configuration=Release
 
@@ -35,4 +39,4 @@ jobs:
           # name: LibISDB
           # path: TVTest/src/LibISDB/Projects/x64
           name: TVtest_x64
-          path: $GITHUB_WORKSPACE/TVtest/x64
+          path: TVtest/x64
